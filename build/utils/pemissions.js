@@ -6,21 +6,22 @@ Object.defineProperty(exports, "__esModule", {
 exports.validateUsers = exports.validEmail = exports.hasPermissions = void 0;
 const permissions = {
   'getUsers': {
-    all: ['head_trainer'],
-    read: ['trainee', 'trainer', 'head_trainer'],
-    write: ['trainer', 'head_trainer', 'trainer'],
+    all: ['head-trainer'],
+    read: ['trainee', 'trainer', 'head-trainer'],
+    write: ['trainer', 'head-trainer', 'trainer'],
     delete: []
   }
 };
 
 const hasPermissions = (moduleName, role, permissionType) => {
-  // console.log(role, "<<<<<<df,", permissionType, moduleName)
+  console.log(role, "<<<<<<df,", permissionType, moduleName);
+
   if (permissions[moduleName][permissionType].includes(role)) {
-    // console.log("true")
+    console.log("true");
     return '';
   } else {
-    // console.log(permissions[moduleName][permissionType].includes(role), '------');
-    // console.log("false")
+    console.log(permissions[moduleName][permissionType].includes(role), '------');
+    console.log("false");
     return 'disabled';
   }
 };
