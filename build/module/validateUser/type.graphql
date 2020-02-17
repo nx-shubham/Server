@@ -1,0 +1,22 @@
+# type Users {
+#     traineeEmail: String
+#     reviewerEmail: String
+#     role: String
+# }
+
+input usersRole {
+    email: String
+    role: String
+}
+
+type Permission {
+    read: String
+    write: String
+    delete: String
+    error: String
+}
+
+type Users {
+    email: String
+    role: String
+}

@@ -1,0 +1,17 @@
+# type Query {
+#   getUser: [Users]
+# }
+
+# type Mutation {
+#   addUser(traineeEmail: String, reviewerEmail: String, role: String): Users
+# }
+
+type Query {
+   getUserDetails: [Users]
+  getUser(data:usersRole): Permission
+
+}
+
+type Mutation {
+  addUser(email: String,  role: String): Users
+}
